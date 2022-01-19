@@ -1,11 +1,12 @@
-module.exports = {
+module.exports
+= {
 name: "$alwaysExecute",
 $if: "v4",
 code:` 
 $if[$getGlobalUserVar[xp]>$getGlobalUserVar[req]]
 $title[1;**Pet levelled up!**]
 $color[1;$getServerVar[color]]
-$description[1;**Oh nice $replaceText[$replaceText[$replaceText[$getGlobalUserVar[pet];miu;<a:hskk:931531868329893888>];emaro;<a:emafos:931531733579468840>];hao;<:mius:931531680328613939>] $replaceText[$replaceText[$replaceText[$toLowerCase[$message[1]];miu;miu];emaro;emaro];hao;hao] levelled up to $getGlobalUserVar[level]**]
+$description[1;**Oh nice $replaceText[$replaceText[$replaceText[$getGlobalUserVar[pet];miu;<a:hskk:931531868329893888>];emaro;<a:emafos:931531733579468840>];hao;<:mius:931531680328613939>] $replaceText[$replaceText[$replaceText[$getGlobalUserVar[pet];miu;miu];emaro;emaro];hao;hao] levelled up to $getGlobalUserVar[level]**]
 $setGlobalUserVar[req;$sum[$getGlobalUserVar[req];100]]
 $setGlobalUserVar[xp;0]
 $setGlobalUserVar[level;$sum[$getGlobalUserVar[level];1]]
